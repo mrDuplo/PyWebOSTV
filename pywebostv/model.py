@@ -10,6 +10,17 @@ class Application(object):
         return "<Application '{}'>".format(self["title"])
 
 
+class LaunchPoints(object):
+    def __init__(self, data):
+        self.data = data
+
+    def __getitem__(self, val):
+        return self.data[val]
+
+    def __repr__(self):
+        return "<LaunchPoints '{}'>".format(self["title"])
+
+
 class InputSource(object):
     def __init__(self, data):
         self.data = data

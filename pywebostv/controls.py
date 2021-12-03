@@ -9,7 +9,7 @@ from queue import Empty
 from uuid import uuid4
 
 from pywebostv.connection import WebOSWebSocketClient
-from pywebostv.model import Application, InputSource, AudioOutputSource
+from pywebostv.model import Application, InputSource, AudioOutputSource, LaunchPoints
 
 
 ARGS_NONE = ()
@@ -280,6 +280,14 @@ class ApplicationControl(WebOSControlBase):
             "kwargs": {},
             "payload": arguments(0),
             "validation": standard_validation,
+        },
+        "list_launch_points": {
+            "uri": "ssap://com.webos.applicationManager/listLaunchPoints",
+            "args": [],
+            "kwargs": {},
+            "payload": {},
+            "validation": standard_validation,
+            "return": lambda payload: [LaunchPoints(x) for x in payload["launchPoints"]]
         }
     }
 
