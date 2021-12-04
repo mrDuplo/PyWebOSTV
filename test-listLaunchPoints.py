@@ -26,3 +26,5 @@ if not connected:
 appObj = ApplicationControl(client)
 launchPoints = appObj.list_launch_points()
 print(launchPoints)
+for item in launchPoints:
+	print(item['title'], item['largeIcon'])

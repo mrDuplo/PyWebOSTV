@@ -5,3 +5,6 @@ pywebostv/__pycache__/connection.cpython-310.pyc
 pywebostv/__pycache__/__init__.cpython-310.pyc
 .gitignore
 config/lgtv.conf
+launcpoints_return_result_short.txt
+launcpoints_return_result.txt
+.gitignore

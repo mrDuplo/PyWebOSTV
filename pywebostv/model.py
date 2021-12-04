@@ -18,7 +18,7 @@ class LaunchPoints(object):
         return self.data[val]
 
     def __repr__(self):
-        return "<LaunchPoints '{}'>".format(self["title"])
+        return "<LaunchPoints '{}'>".format(self["launchPoints"])
 
 
 class InputSource(object):
