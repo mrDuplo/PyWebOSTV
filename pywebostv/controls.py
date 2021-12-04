@@ -287,7 +287,7 @@ class ApplicationControl(WebOSControlBase):
             "kwargs": {},
             "payload": {},
             "validation": standard_validation,
-            "return": lambda payload: [LaunchPoints(x) for x in payload["launchPoints"]]
+            "return": lambda payload: payload
         }
     }
 
